@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="empty_space">0dp</dimen>
+    <dimen name="line_space">1px</dimen>
+    <dimen name="small_space">5dp</dimen>
+    <dimen name="medium_space">10dp</dimen>
+    <dimen name="large_space">15dp</dimen>
+    <dimen name="xlarge_space">20dp</dimen>
+    <dimen name="xxlarge_space">25dp</dimen>
+
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_medium">15sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_x_large">24sp</dimen>
+
+    <!-- alphabet fast scroller -->
+    <dimen name="alphabet_width">30dp</dimen>
+    <dimen name="alphabet_padding">2dp</dimen>
+</resources>
