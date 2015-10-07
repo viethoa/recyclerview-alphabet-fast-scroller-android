@@ -1,4 +1,4 @@
-package viethoa.com.fastcroll.alphabet.models;
+package com.viethoa.models;
 
 /**
  * Created by VietHoa on 02/10/15.

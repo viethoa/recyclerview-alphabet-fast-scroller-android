@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <viethoa.com.fastcroll.alphabet.ui.views.RecyclerViewFastScroller
+    <com.viethoa.RecyclerViewFastScroller
         android:id="@+id/fast_scroller"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

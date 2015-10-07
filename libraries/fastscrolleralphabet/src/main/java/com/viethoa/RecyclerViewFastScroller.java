@@ -1,4 +1,4 @@
-package viethoa.com.fastcroll.alphabet.ui.views;
+package com.viethoa;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -18,11 +18,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.List;
+import com.viethoa.adapters.AlphabetAdapter;
+import com.viethoa.models.AlphabetItem;
 
-import viethoa.com.fastcroll.alphabet.R;
-import viethoa.com.fastcroll.alphabet.adapters.AlphabetAdapter;
-import viethoa.com.fastcroll.alphabet.models.AlphabetItem;
+import java.util.List;
 
 /**
  * Created by VietHoa on 07/10/15.

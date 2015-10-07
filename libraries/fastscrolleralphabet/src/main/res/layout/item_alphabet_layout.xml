@@ -5,10 +5,5 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:textSize="@dimen/font_medium"
-    android:paddingTop="3dp"
-    android:paddingBottom="3dp"
-    android:paddingLeft="@dimen/small_space"
-    android:paddingRight="@dimen/small_space"
-    android:paddingStart="@dimen/small_space"
-    android:paddingEnd="@dimen/small_space"
+    android:padding="3dp"
     android:text="A"/>

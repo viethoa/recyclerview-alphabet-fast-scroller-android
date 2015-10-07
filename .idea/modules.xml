@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FastcrollAlphabet-Android.iml" filepath="$PROJECT_DIR$/FastcrollAlphabet-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FastcrollAlphabet.iml" filepath="$PROJECT_DIR$/FastcrollAlphabet.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

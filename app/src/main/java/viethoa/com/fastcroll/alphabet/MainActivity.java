@@ -5,13 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.viethoa.RecyclerViewFastScroller;
+import com.viethoa.models.AlphabetItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import viethoa.com.fastcroll.alphabet.models.AlphabetItem;
-import viethoa.com.fastcroll.alphabet.ui.views.RecyclerViewFastScroller;
 
 public class MainActivity extends AppCompatActivity {
 

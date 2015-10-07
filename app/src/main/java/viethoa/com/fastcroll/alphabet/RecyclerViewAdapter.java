@@ -6,11 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.viethoa.RecyclerViewFastScroller;
+
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import viethoa.com.fastcroll.alphabet.ui.views.RecyclerViewFastScroller;
 
 /**
  * Created by VietHoa on 07/10/15.

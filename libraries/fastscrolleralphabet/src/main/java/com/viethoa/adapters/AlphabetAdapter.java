@@ -1,4 +1,4 @@
-package viethoa.com.fastcroll.alphabet.adapters;
+package com.viethoa.adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -8,12 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
+import com.viethoa.R;
+import com.viethoa.models.AlphabetItem;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import viethoa.com.fastcroll.alphabet.R;
-import viethoa.com.fastcroll.alphabet.models.AlphabetItem;
+import java.util.List;
 
 /**
  * Created by VietHoa on 02/10/15.
@@ -60,12 +58,11 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tv_word)
         TextView tvWord;
 
-        public ViewHolder(View v) {
-            super(v);
-            ButterKnife.bind(this, v);
+        public ViewHolder(View itemView) {
+            super(itemView);
+            tvWord = (TextView) itemView.findViewById(R.id.tv_word);
         }
 
         public void bind(final AlphabetItem alphabetItem) {
