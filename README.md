@@ -6,9 +6,8 @@ Support Sdk Version 14 to lastest.
 
 Feature
 -----
-- Auto dismiss dialog in Negative or Positive button clicked.
-- Simple to set cancelable.
-- Set `null` for optional that you don't to use this.
+- Change FastScrollerAlphabet width: just add `<dimen name="alphabet_width">30dp</dimen>` this should be override, currently this is 30dp.
+- Change FastScrollerAlphabet Text Size: just add `<dimen name="font_medium">15sp</dimen>` currently 15sp for now.
 
 ![](https://github.com/viethoa/image-repositories/blob/master/fastcsrcolleralphabet.gif "Fast scroller alphabet")
 
@@ -28,56 +27,56 @@ Dependency
 
 How to use
 -----
-    **Step 1:** add this to your xml.
+**Step 1:** add this to your xml:
 
-        <com.viethoa.RecyclerViewFastScroller
-                android:id="@+id/fast_scroller"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"/>
+    <com.viethoa.RecyclerViewFastScroller
+            android:id="@+id/fast_scroller"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
 
-    **Step 2:** set recycler view for RecyclerViewFastscroller.
+**Step 2:** set recycler view for RecyclerViewFastscroller.
 
-        fastScroller.setRecyclerView(mRecyclerView);
+    fastScroller.setRecyclerView(mRecyclerView);
 
-    **Step 3:** generate alphabet item.
+**Step 3:** generate alphabet item:
 
-        ArrayList<AlphabetItem> mAlphabetItems = new ArrayList<>();
-        List<String> strAlphabets = new ArrayList<>();
-        for (int i = 0; i < mDataArray.size(); i++) {
-            String name = mDataArray.get(i);
-            if (name == null || name.trim().isEmpty())
-                continue;
+    ArrayList<AlphabetItem> mAlphabetItems = new ArrayList<>();
+    List<String> strAlphabets = new ArrayList<>();
+    for (int i = 0; i < mDataArray.size(); i++) {
+        String name = mDataArray.get(i);
+        if (name == null || name.trim().isEmpty())
+            continue;
 
-            String word = name.substring(0, 1);
-            if (!strAlphabets.contains(word)) {
-                strAlphabets.add(word);
-                mAlphabetItems.add(new AlphabetItem(i, word, false));
-            }
+        String word = name.substring(0, 1);
+        if (!strAlphabets.contains(word)) {
+            strAlphabets.add(word);
+            mAlphabetItems.add(new AlphabetItem(i, word, false));
         }
+    }
 
-        fastScroller.setUpAlphabet(mAlphabetItems);
+    fastScroller.setUpAlphabet(mAlphabetItems);
 
-        Note: mDataArray: this is your recycler data array model, just get the name you want to fast scroll.
+    Note: mDataArray: this is your recycler data array model, just get the name you want to fast scroll.
 
-    **Step 4:** implement bubble text getter listener in your RecyclerViewAdapter.
+**Step 4:** implement bubble text getter listener in your RecyclerViewAdapter:
 
-        implements RecyclerViewFastScroller.BubbleTextGetter
+    implements RecyclerViewFastScroller.BubbleTextGetter
 
-        @Override
-        public String getTextToShowInBubble(int position) {
-            if (pos < 0 || pos >= mDataArray.size())
-                return null;
+    @Override
+    public String getTextToShowInBubble(int position) {
+        if (pos < 0 || pos >= mDataArray.size())
+            return null;
 
-            String name = mDataArray.get(pos);
-            if (name == null || name.length() < 1)
-                return null;
+        String name = mDataArray.get(pos);
+        if (name == null || name.length() < 1)
+            return null;
 
-            return mDataArray.get(pos).substring(0, 1);
-        }
+        return mDataArray.get(pos).substring(0, 1);
+    }
 
-        Note: This function to mapping your RecyclerView with FastScroller alphabet in scrolling.
+    Note: This function to mapping your RecyclerView with FastScroller alphabet in scrolling.
 
 
 
