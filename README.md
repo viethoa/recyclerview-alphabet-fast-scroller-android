@@ -41,7 +41,7 @@ How to use
 
         fastScroller.setRecyclerView(mRecyclerView);
 
-    Step 3: ganeray alphabet item.
+    Step 3: generate alphabet item.
 
         ArrayList<AlphabetItem> mAlphabetItems = new ArrayList<>();
         List<String> strAlphabets = new ArrayList<>();
