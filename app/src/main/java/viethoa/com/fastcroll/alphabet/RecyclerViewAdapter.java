@@ -49,6 +49,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         if (pos < 0 || pos >= mDataArray.size())
             return null;
 
+        String name = mDataArray.get(pos);
+        if (name == null || name.length() < 1)
+            return null;
+
         return mDataArray.get(pos).substring(0, 1);
     }
 
