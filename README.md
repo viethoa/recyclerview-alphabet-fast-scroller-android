@@ -28,7 +28,7 @@ Dependency
 
 How to use
 -----
-    Step 1: add this to your xml.
+    **Step 1:** add this to your xml.
 
         <com.viethoa.RecyclerViewFastScroller
                 android:id="@+id/fast_scroller"
@@ -37,11 +37,11 @@ How to use
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"/>
 
-    Step 2: set recycler view for RecyclerViewFastscroller.
+    **Step 2:** set recycler view for RecyclerViewFastscroller.
 
         fastScroller.setRecyclerView(mRecyclerView);
 
-    Step 3: generate alphabet item.
+    **Step 3:** generate alphabet item.
 
         ArrayList<AlphabetItem> mAlphabetItems = new ArrayList<>();
         List<String> strAlphabets = new ArrayList<>();
@@ -61,7 +61,7 @@ How to use
 
         Note: mDataArray: this is your recycler data array model, just get the name you want to fast scroll.
 
-    Step 4: implement bubble text getter listener in your RecyclerViewAdapter.
+    **Step 4:** implement bubble text getter listener in your RecyclerViewAdapter.
 
         implements RecyclerViewFastScroller.BubbleTextGetter
 
