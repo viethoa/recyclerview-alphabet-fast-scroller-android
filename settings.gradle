@@ -1,2 +1,2 @@
 include ':app'
-include ':libraries:fastscrolleralphabet'
+//include ':libraries:fastscrolleralphabet'

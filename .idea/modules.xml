@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FastcrollAlphabet.iml" filepath="$PROJECT_DIR$/FastcrollAlphabet.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/fastscrolleralphabet/fastscrolleralphabet.iml" filepath="$PROJECT_DIR$/libraries/fastscrolleralphabet/fastscrolleralphabet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
     </modules>
   </component>
 </project>
