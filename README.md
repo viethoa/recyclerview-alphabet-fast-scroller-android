@@ -6,8 +6,8 @@ Support Sdk Version 14 to lastest.
 
 Version
 -----
-- 1.1.0: `Fix WRAP_CONTENT` on Android Support Library 23.2.0 and `wrong alphabet item selection` in long alphabet list item.
-- 1.0.0: Just work good on RecyclerView support version `23.0.1` and `short alphabet list item`.
+- 1.1.0: [Fix WRAP_CONTENT](#) on Android Support Library 23.2.0 and [wrong alphabet item selection](#) in long alphabet list item.
+- 1.0.0: Just work good on RecyclerView support version [23.0.1](#) and [short alphabet list item](#).
 
 Feature
 -----
