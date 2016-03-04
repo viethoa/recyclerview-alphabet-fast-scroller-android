@@ -50,11 +50,11 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.bind(mDataArray.get(position));
+        holder.bind(mDataArray.get(position), position);
     }
 
     public interface OnItemClickListener {
-        void OnItemClicked(int position);
+        void OnItemClicked(int alphabetPosition, int position);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -65,7 +65,7 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
             tvWord = (TextView) itemView.findViewById(R.id.tv_word);
         }
 
-        public void bind(final AlphabetItem alphabetItem) {
+        public void bind(final AlphabetItem alphabetItem, final int position) {
             if (alphabetItem == null || alphabetItem.word == null)
                 return;
 
@@ -80,7 +80,7 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
                 public void onClick(View view) {
                     if (listener == null)
                         return;
-                    listener.OnItemClicked(alphabetItem.position);
+                    listener.OnItemClicked(alphabetItem.position, position);
                 }
             });
         }

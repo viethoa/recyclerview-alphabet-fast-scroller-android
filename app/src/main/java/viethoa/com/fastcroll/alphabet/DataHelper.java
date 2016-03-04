@@ -141,6 +141,30 @@ public class DataHelper {
             add("Z item 1");
             add("Z item 1");
             add("Z item 1");
+
+            add("S item 1");
+            add("S item 1");
+            add("S item 1");
+            add("S item 1");
+            add("S item 1");
+
+            add("R item 1");
+            add("R item 1");
+            add("R item 1");
+            add("R item 1");
+            add("R item 1");
+
+            add("T item 1");
+            add("T item 1");
+            add("T item 1");
+            add("T item 1");
+            add("T item 1");
+
+            add("U item 1");
+            add("U item 1");
+            add("U item 1");
+            add("U item 1");
+            add("U item 1");
         }};
     }
 }

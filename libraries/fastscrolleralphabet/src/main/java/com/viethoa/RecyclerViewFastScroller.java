@@ -267,8 +267,11 @@ public class RecyclerViewFastScroller extends LinearLayout {
 
                         // This is your pressed view
                         if (rect.contains(x, y)) {
-                            performSelectedAlphabetWord(i);
-                            alphabetTouchEventOnItem(i);
+                            LinearLayoutManager layoutManager = ((LinearLayoutManager)alphabetRecyclerView.getLayoutManager());
+                            int firstVisiblePosition = layoutManager.findFirstVisibleItemPosition();
+                            int position = i + firstVisiblePosition;
+                            performSelectedAlphabetWord(position);
+                            alphabetTouchEventOnItem(position);
                             break;
                         }
                     }
@@ -277,31 +280,6 @@ public class RecyclerViewFastScroller extends LinearLayout {
             }
             return true;
         }
-    }
-
-    private void alphabetTouchEventOnItem(int position) {
-        if (alphabets == null || position < 0 || position >= alphabets.size())
-            return;
-
-        takeRecyclerViewScrollToAlphabetPosition(alphabets.get(position).position);
-    }
-
-    private class OnAlphabetItemClickListener implements AlphabetAdapter.OnItemClickListener {
-        @Override
-        public void OnItemClicked(int position) {
-            takeRecyclerViewScrollToAlphabetPosition(position);
-        }
-    }
-
-    private void takeRecyclerViewScrollToAlphabetPosition(int position) {
-        if (recyclerView == null || recyclerView.getAdapter() == null)
-            return;
-
-        int count = recyclerView.getAdapter().getItemCount();
-        if (position < 0 || position > count)
-            return;
-
-        ((LinearLayoutManager) recyclerView.getLayoutManager()).scrollToPositionWithOffset(position, 0);
     }
 
     private void performSelectedAlphabetWord(int position) {
@@ -314,6 +292,32 @@ public class RecyclerViewFastScroller extends LinearLayout {
 
         alphabets.get(position).isActive = true;
         alphabetAdapter.refreshDataChange(alphabets);
+    }
+
+    private void alphabetTouchEventOnItem(int position) {
+        if (alphabets == null || position < 0 || position >= alphabets.size())
+            return;
+
+        takeRecyclerViewScrollToAlphabetPosition(alphabets.get(position).position);
+    }
+
+    private class OnAlphabetItemClickListener implements AlphabetAdapter.OnItemClickListener {
+        @Override
+        public void OnItemClicked(int alphabetPosition, int position) {
+            performSelectedAlphabetWord(position);
+            takeRecyclerViewScrollToAlphabetPosition(alphabetPosition);
+        }
+    }
+
+    private void takeRecyclerViewScrollToAlphabetPosition(int position) {
+        if (recyclerView == null || recyclerView.getAdapter() == null)
+            return;
+
+        int count = recyclerView.getAdapter().getItemCount();
+        if (position < 0 || position > count)
+            return;
+
+        ((LinearLayoutManager) recyclerView.getLayoutManager()).scrollToPositionWithOffset(position, 0);
     }
 
     private void setAlphabetWorkSelected(String bubbleText) {
@@ -332,4 +336,7 @@ public class RecyclerViewFastScroller extends LinearLayout {
             }
         }
     }
+
+
+
 }
