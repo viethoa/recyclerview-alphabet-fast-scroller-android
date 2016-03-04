@@ -4,6 +4,11 @@ This is an Open Source Android library that allows developers to easily add fast
 Feel free to use it all you want in your Android apps provided that you cite this project and include the license in your app.
 Support Sdk Version 14 to lastest.
 
+Version
+-----
+- 1.1.0: [Fix WRAP_CONTENT] on Android Support Library 23.2.0 and [wrong alphabet item selection] in long alphabet list item.
+- 1.0.0: Just work good on RecyclerView support version [23.0.1] and [short alphabet list item].
+
 Feature
 -----
 - Change FastScrollerAlphabet width: just add `<dimen name="alphabet_width">30dp</dimen>` this should be override, currently this is 30dp.
