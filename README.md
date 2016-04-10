@@ -23,7 +23,7 @@ Dependency
     }
 
     dependencies {
-        compile 'com.github.viethoa:fastscroller:1.1.0-SNAPSHOT'
+        compile 'com.github.viethoa:fastscroller:1.1.0'
     }
 
     **Or**:

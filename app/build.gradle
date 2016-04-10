@@ -20,10 +20,9 @@ android {
 }
 
 dependencies {
-    compile 'com.jakewharton:butterknife:7.0.1'
     compile "com.android.support:appcompat-v7:$rootProject.ext.recyclerview"
     compile "com.android.support:recyclerview-v7:$rootProject.ext.recyclerview"
-
-    compile 'com.github.viethoa:fastscroller:1.1.0-SNAPSHOT'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.viethoa:fastscroller:1.1.0'
     //compile project (':libraries:fastscrolleralphabet')
 }
