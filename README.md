@@ -6,13 +6,18 @@ Support Sdk Version 14 to lastest.
 
 Version
 -----
+- 1.2.0: Add textColor, textSelectedColor, backgroundColor, backgroundBorderColor options.
 - 1.1.0: [Fix WRAP_CONTENT on Android Support Library 23.2.0](#) and [wrong alphabet item selection](#) in long alphabet list item.
 - 1.0.0: Just work good on RecyclerView support version [23.0.1](#) and [short alphabet list item](#).
 
 Feature
 -----
-- Change FastScrollerAlphabet width: just add `<dimen name="alphabet_width">30dp</dimen>` this should be override, currently this is 30dp.
-- Change FastScrollerAlphabet Text Size: just add `<dimen name="font_medium">15sp</dimen>` currently 15sp for now.
+- Change TextColor: just add `<color name="alphabet_text_color">#3F51B5</color>` into colors.xml.
+- Change TextSelectedColor: just add `<color name="alphabet_text_selected_color">#3F51B5</color>` into colors.xml.
+- Change BackgroundColor: just add `<color name="alphabet_background_color">#3F51B5</color>` into colors.xml.
+- Change BackgroundBorderColor: just add `<color name="alphabet_background_border_color">#3F51B5</color>` into colors.xml.
+- Change FastScrollerAlphabet width: just add `<dimen name="alphabet_width">30dp</dimen>` into dimens.xml, currently is 30dp.
+- Change FastScrollerAlphabet Text Size: just add `<dimen name="font_medium">15sp</dimen>` into dimens.xml, currently is 15sp.
 
 ![](https://github.com/viethoa/image-repositories/blob/master/fastcsrcolleralphabet.gif "Fast scroller alphabet")
 
@@ -23,7 +28,7 @@ Dependency
     }
 
     dependencies {
-        compile 'com.github.viethoa:fastscroller:1.1.0'
+        compile 'com.github.viethoa:fastscroller:1.2.0'
     }
 
     **Or**:
