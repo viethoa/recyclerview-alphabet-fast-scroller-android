@@ -71,9 +71,9 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
 
             tvWord.setText(alphabetItem.word);
             tvWord.setTypeface(null, alphabetItem.isActive ? Typeface.BOLD : Typeface.NORMAL);
-            tvWord.setTextColor(alphabetItem.isActive ?
-                    mContext.getResources().getColor(R.color.primary_color) :
-                    mContext.getResources().getColor(R.color.dark_color));
+            tvWord.setTextColor(alphabetItem.isActive
+                    ? mContext.getResources().getColor(R.color.alphabet_text_selected_color)
+                    : mContext.getResources().getColor(R.color.alphabet_text_color));
 
             tvWord.setOnClickListener(new View.OnClickListener() {
                 @Override
