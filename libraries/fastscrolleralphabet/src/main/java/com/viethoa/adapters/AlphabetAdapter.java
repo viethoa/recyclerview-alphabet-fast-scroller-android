@@ -78,8 +78,10 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
             tvWord.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (listener == null)
+                    if (listener == null) {
                         return;
+                    }
+
                     listener.OnItemClicked(alphabetItem.position, position);
                 }
             });
