@@ -69,12 +69,15 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
             if (alphabetItem == null || alphabetItem.word == null)
                 return;
 
+            // Text
             tvWord.setText(alphabetItem.word);
+            // Style
             tvWord.setTypeface(null, alphabetItem.isActive ? Typeface.BOLD : Typeface.NORMAL);
+            // Text color
             tvWord.setTextColor(alphabetItem.isActive
                     ? mContext.getResources().getColor(R.color.alphabet_text_selected_color)
                     : mContext.getResources().getColor(R.color.alphabet_text_color));
-
+            // Click event
             tvWord.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
