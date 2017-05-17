@@ -2,7 +2,7 @@ ext.versionCode = 2
 ext.versionName = "1.2"
 
 ext.CompileSDKVersion = 25
-ext.BuildToolsVersion = '25.0.1'
+ext.BuildToolsVersion = "25.0.1"
 ext.MinSdkVersion = 14
 ext.TargetSdkVersion = 25
 ext.supportVersion = "25.3.1"
