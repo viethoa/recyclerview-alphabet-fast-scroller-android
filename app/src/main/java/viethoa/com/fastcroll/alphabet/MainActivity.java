@@ -11,14 +11,14 @@ import com.viethoa.models.AlphabetItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.my_recycler_view)
+    @BindView(R.id.my_recycler_view)
     RecyclerView mRecyclerView;
-    @Bind(R.id.fast_scroller)
+    @BindView(R.id.fast_scroller)
     RecyclerViewFastScroller fastScroller;
 
     private List<String> mDataArray;

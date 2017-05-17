@@ -10,7 +10,7 @@ import com.viethoa.RecyclerViewFastScroller;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -57,7 +57,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tv_alphabet)
+        @BindView(R.id.tv_alphabet)
         TextView mTextView;
 
         public ViewHolder(View itemView) {
