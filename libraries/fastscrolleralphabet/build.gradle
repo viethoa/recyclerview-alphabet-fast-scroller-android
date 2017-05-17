@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 //apply from: '../maven_push.gradle'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion rootProject.ext.CompileSDKVersion
+    buildToolsVersion rootProject.ext.BuildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 23
+        minSdkVersion rootProject.ext.MinSdkVersion
+        targetSdkVersion rootProject.ext.TargetSdkVersion
         versionCode 1
         versionName "1.0"
     }
@@ -22,5 +22,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
 }

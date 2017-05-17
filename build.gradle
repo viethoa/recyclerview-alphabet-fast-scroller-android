@@ -1,11 +1,11 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "version.gradle"
 
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.3.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,14 +20,45 @@ allprojects {
 }
 
 ext {
-    compileSdkVersion = 24
-    buildToolsVersion = "24.0.2"
-    minSdkVersion = 14
-    targetSdkVersion = 24
 
-    recyclerview = "24.2.1"
-}
+    androidConfiguration = {
+        compileSdkVersion CompileSDKVersion
+        buildToolsVersion BuildToolsVersion
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+        defaultConfig {
+            minSdkVersion MinSdkVersion
+            targetSdkVersion TargetSdkVersion
+        }
+
+//        lintOptions {
+//            disable 'InvalidPackage' // For ButterKnife
+//            abortOnError true
+//            absolutePaths false
+//            lintConfig file("lint.xml")
+//        }
+//
+//        testOptions {
+//            unitTests.all {
+//                jacoco {
+//                    includeNoLocationClasses = true
+//                }
+//            }
+//        }
+//
+//        signingConfigs {
+//            debug {
+//                storeFile file("$rootProject.projectDir/debug.keystore")
+//                storePassword "android"
+//                keyAlias "androiddebugkey"
+//                keyPassword "android"
+//            }
+//
+//            release {
+//                storeFile file("$rootProject.projectDir/myteksi-android-prod.keystore")
+//                storePassword System.getenv("KEYSTORE_PASSWORD")
+//                keyAlias System.getenv("KEY_ALIAS")
+//                keyPassword System.getenv("KEY_PASSWORD")
+//            }
+//        }
+    }
 }
