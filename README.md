@@ -1,3 +1,5 @@
+[![Build Status](https://www.bitrise.io/app/5737ee900a4d6096/status.svg?token=BYgGVUTf7i8NDjYWU-vXHQ)](https://www.bitrise.io/build/fbd3d5b02ed8aec4)
+
 Fast scroller alphabet
 -----
 This is an Open Source Android library that allows developers to easily add fast scroller alphabet to recycler view.
